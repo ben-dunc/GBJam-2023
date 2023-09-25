@@ -25,21 +25,16 @@ public class DestroyOnImpact : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other) {
         if (tagsToCollideWith.Contains(other.gameObject.tag) || tagsToCollideWith.Count == 0) {
             Destroy(gameObject);
+            if (corpse != null)
+                Instantiate(corpse, transform.position, transform.rotation);
         }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (tagsToCollideWith.Contains(other.gameObject.tag) || tagsToCollideWith.Count == 0) {
             Destroy(gameObject);
+            if (corpse != null)
+                Instantiate(corpse, transform.position, transform.rotation);
         }
-    }
-
-    void OnDestroy() {
-        if (corpse != null && !isApplicationQuitting)
-            Instantiate(corpse, transform.position, transform.rotation);
-    }
-
-    void OnApplicationQuit () {
-        isApplicationQuitting = true;
     }
 }
