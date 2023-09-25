@@ -6,8 +6,9 @@ public class PlayerAnimator : MonoBehaviour {
 
     Rigidbody2D rb2;    
     Animator anim;
-    string dir = "s";
+    [System.NonSerialized] public string dir = "s";
     readonly float MOVEMENT_DEADZONE = 0.01f;
+    bool dead = false;
     
     void Start() {
         rb2 = GetComponent<Rigidbody2D>();
@@ -15,6 +16,8 @@ public class PlayerAnimator : MonoBehaviour {
     }
 
     void Update() {
+        if (dead) return;
+        
         string clipToPlay = GetAnimationName();
         anim.Play(clipToPlay);
     }
@@ -45,5 +48,10 @@ public class PlayerAnimator : MonoBehaviour {
         }
         
         return $"player-{ (moving ? "move" : "idle") }-{ dir }_Clip";
+    }
+
+    void Die() {
+        dead = true;
+        anim.Play("player-die_Clip");
     }
 }

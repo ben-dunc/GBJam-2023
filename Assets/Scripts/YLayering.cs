@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class YLayering : MonoBehaviour {
 
+    public float offsetByUnit = 0f;
     private SpriteRenderer sr;
 
     void Start() {
@@ -11,6 +12,6 @@ public class YLayering : MonoBehaviour {
     }
 
     void Update() {
-        sr.sortingOrder = (int) -(transform.position.y * 100);
+        sr.sortingOrder = (int) -((transform.position.y + offsetByUnit) * 100);
     }
 }

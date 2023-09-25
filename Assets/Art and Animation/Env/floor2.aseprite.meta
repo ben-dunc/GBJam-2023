@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638311031074849084
+  platformSettingsDirtyTick: 638311771854348529
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: floor2
     originalName: 
-    pivot: {x: 0.5555556, y: 0.6}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 9
-      height: 10
+      width: 8
+      height: 8
     spriteID: e62f6faff0339ad479b07080477368d0
     spriteBone: []
     spriteOutline: []
@@ -151,10 +151,10 @@ ScriptedImporter:
     - name: floor2
       frameIndex: 0
       cellRect:
-        x: -1
-        y: -2
-        width: 9
-        height: 10
+        x: 0
+        y: 0
+        width: 8
+        height: 8
       spriteId: e62f6faff0339ad479b07080477368d0
     linkedCells: []
     parentIndex: -1

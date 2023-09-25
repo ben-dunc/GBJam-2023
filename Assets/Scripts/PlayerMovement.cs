@@ -6,12 +6,18 @@ public class PlayerMovement : MonoBehaviour {
     
     public float speed = 10f;
     private Rigidbody2D rb2;
+    private bool dead = false;
 
     void Start() {
         rb2 = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate() {
+        if (dead) {
+            SetVelocity(Vector2.zero, 0);
+            return;
+        }
+
         Vector2 inputAxis = GetInputAxis();
         SetVelocity(inputAxis, speed);
     }
@@ -34,5 +40,9 @@ public class PlayerMovement : MonoBehaviour {
             v = 1;
 
         return new Vector2(h, v).normalized;
+    }
+
+    void Die() {
+        dead = true;
     }
 }

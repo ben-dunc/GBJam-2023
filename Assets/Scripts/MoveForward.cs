@@ -12,6 +12,6 @@ public class MoveForward : MonoBehaviour
     }
 
     void FixedUpdate() {
-        rb2.velocity = Vector2.up * speed;
+        rb2.velocity = transform.up * speed;
     }
 }

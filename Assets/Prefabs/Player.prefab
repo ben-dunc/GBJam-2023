@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1910650962422602025}
   - component: {fileID: 2866776366915793870}
   - component: {fileID: 6481160830329582379}
+  - component: {fileID: 3749161927162623811}
+  - component: {fileID: 9154578863923807351}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -97,8 +99,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.3}
+  m_Offset: {x: 0, y: 0.125}
+  m_Size: {x: 0.5, y: 0.25}
   m_Direction: 1
 --- !u!212 &493634410200268311
 SpriteRenderer:
@@ -210,3 +212,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377e3123ea44c884689f7d0772a220fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3749161927162623811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453762831604250531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc841557b687b2438c864e614082b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9154578863923807351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453762831604250531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a328d54a33f26747918ac5d84952c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 7752033468371425451, guid: a84a3ebb583a9aa48a81cfe984fdb68a, type: 3}
+  bulletSpeed: 20
+  fireCooldown: 10

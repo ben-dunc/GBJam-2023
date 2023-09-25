@@ -9,6 +9,8 @@ TagManager:
   - Pit
   - Portal
   - Pickup
+  - Env
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Walls
   - 
   - 
   - 
@@ -43,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 201556619
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
