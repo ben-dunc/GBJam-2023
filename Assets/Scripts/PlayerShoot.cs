@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour {
 
 
     Rigidbody2D rb2;    
-    Vector3 norm;
+    Vector3 norm = Vector3.down;
     bool dead = false;
     bool canFire = true;
 

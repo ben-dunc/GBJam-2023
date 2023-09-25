@@ -50,7 +50,7 @@ public class PlayerAnimator : MonoBehaviour {
         return $"player-{ (moving ? "move" : "idle") }-{ dir }_Clip";
     }
 
-    void Die() {
+    public void Die() {
         dead = true;
         anim.Play("player-die_Clip");
     }

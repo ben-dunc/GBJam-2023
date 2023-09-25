@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377e3123ea44c884689f7d0772a220fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetByUnit: 0
 --- !u!114 &3749161927162623811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,10 +225,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc841557b687b2438c864e614082b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartsImage: {fileID: 0}
+  health3: {fileID: 7694951156960146509, guid: b51ffc4cdf9a9714480d727f8ed045d7, type: 3}
+  health2: {fileID: 3916415913616955453, guid: b51ffc4cdf9a9714480d727f8ed045d7, type: 3}
+  health1: {fileID: -4236738815715399333, guid: b51ffc4cdf9a9714480d727f8ed045d7, type: 3}
   health: 3
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2866776366915793870}
+        m_TargetAssemblyTypeName: PlayerAnimator, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9154578863923807351
 MonoBehaviour:
   m_ObjectHideFlags: 0

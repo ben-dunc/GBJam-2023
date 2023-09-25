@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyAi : MonoBehaviour {
 
+    public float score = 10;
+
     GameObject player;
     Rigidbody2D rb2;
     
@@ -16,10 +18,22 @@ public class EnemyAi : MonoBehaviour {
         if (player == null)
             player = GameObject.FindGameObjectsWithTag("Player")[0];
         
+        
         if (player != null) {
-            // move towards player
-            rb2.velocity = (player.transform.position - transform.position).normalized;
-            
+            PlayerHealth pHealth = player.GetComponent<PlayerHealth>();    
+            if (pHealth != null && pHealth.health != 0) {
+                // move towards player
+                rb2.velocity = (player.transform.position - transform.position).normalized;
+            } else {
+                rb2.velocity = Vector2.zero;
+            }
+        } else {
+            rb2.velocity = Vector2.zero;
         }
+    }
+
+    void OnDestroy() {
+        GameManager gm = FindObjectOfType<GameManager>();
+        gm.AddScore(10);
     }
 }
