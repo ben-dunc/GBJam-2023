@@ -34,6 +34,7 @@ public class EnemyAi : MonoBehaviour {
 
     void OnDestroy() {
         GameManager gm = FindObjectOfType<GameManager>();
-        gm.AddScore(10);
+        if (gm != null)
+            gm.AddScore(10);
     }
 }
